@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team ABOK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 2.5em;
+            color: #4CAF50;
+        }
+
+        .team-members {
+            margin: 30px auto;
+            width: 80%;
+        }
+
+        .member {
+            padding: 10px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .member:hover {
+            color: #4CAF50;
+        }
+        
+        .introduction {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            margin: 15px auto;
+            padding: 15px;
+            width: 60%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .visible {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+</head>
+<body>
+
+    <h1>Team ABOK</h1>
+
+    <div class="team-members">
+        <div class="member" _="on mouseover add .visible to #cyrus-intro then wait 0.1s">Cyrus</div>
+        <div class="member" _="on mouseout remove .visible from #cyrus-intro"></div>
+
+        <div id="cyrus-intro" class="introduction">
+            <h2>Cyrus's Introduction</h2>
+            <p>Hi, I’m Cyrus. I love reading books and exploring new ideas. I am also passionate about Violin and Russian.</p>
+        </div>
+    </div>
+
+</body>
+</html>
